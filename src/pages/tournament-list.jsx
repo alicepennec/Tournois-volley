@@ -8,7 +8,7 @@ const TournamentList = () => {
 
     const getAllTournaments = async () => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/tournaments`)
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tournaments`)
             if (response.ok) {
                 const allTournaments = await response.json()
                 setTournaments(allTournaments)
