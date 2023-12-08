@@ -11,7 +11,7 @@ const TournamentList = () => {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tournaments`)
             if (response.ok) {
                 const allTournaments = await response.json()
-                setTournaments(allTournaments)
+                setTournaments(allTournaments.tournaments)
             }
         } catch (error) {
             console.log(error)
@@ -24,9 +24,10 @@ const TournamentList = () => {
 
     return ( 
         <div>
+            {console.log(tournaments)}
             {tournaments && tournaments.map(tournament => (
-                <TournamentCard key={tournament.id} tournament={tournament}/>
-            ))}
+                <TournamentCard key={tournament._id} tournament={tournament}/>)
+            )}
         </div>
      );
 }

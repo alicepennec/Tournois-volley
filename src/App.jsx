@@ -4,12 +4,14 @@ import TournamentList from "./pages/tournament-list"
 import TournamentDetail from "./pages/tournament-detail"
 import TournamentEdit from "./pages/tournament-edit"
 import TournamentAdd from "./pages/tournament-add"
+import PageNotFound from "./pages/page-not-found"
+import Navbar from "./components/navbar"
 
 function App() {
 
   return (
     <div>
-      <h1 class="text-center bg-red-200">Hello world</h1>
+      <Navbar />
 
       <Routes>
         <Route path='/' element={<TournamentList />} />

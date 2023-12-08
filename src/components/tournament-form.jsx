@@ -23,14 +23,14 @@ const TournamentForm = ({isUpdate, tournament}) => {
         e.preventDefault();
         
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tournaments${isUpdate ? `/${tournament.id}` : ''}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/tournaments${isUpdate ? `/${tournament._id}` : ''}`, {
                 method: isUpdate ? 'PUT' : 'POST',
                 body: JSON.stringify(),
                 headers: {'Content-type': 'application/json'}
             })
             if(response.ok) {
                 const currentTournament = await response.json()
-                navigate(`/tournaments/${currentTournament.id}`)
+                navigate(`/tournaments/${currentTournament._id}`)
             }
         } catch (error) {
             console.log(error)
