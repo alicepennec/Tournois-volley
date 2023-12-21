@@ -1,5 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root{
+    background-color: rgb(237, 248, 237);
+    color: rgb(24, 24, 24);
+    font-family: 'Roboto', sans-serif;
+}
 
 /* npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch */
