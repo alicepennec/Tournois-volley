@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router";
 import "./tournament-card.css";
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const TournamentCard = ({tournament}) => {
     
@@ -17,9 +19,9 @@ const TournamentCard = ({tournament}) => {
                         <img className="" src={tournament.picture} alt="poster" />
                     </div>
                     <div className="right">
-                        <h2>{tournament.date}</h2>
-                        <h3>{tournament.city}</h3>
+                        <h2><CalendarMonthIcon /> {tournament.date}</h2>
                         <h1>{tournament.name}</h1>
+                        <h3><LocationOnIcon /> {tournament.city}</h3>
                         <p className="">{tournament.description}</p>
                     </div>
                 </div>
