@@ -1,0 +1,67 @@
+.tournamentDetail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .top{
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .imgContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+
+            img{
+                z-index: 0;
+                width: 100%;
+            }
+            
+            .text{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                width: 100%;
+                padding: 20px;
+            }
+
+            h2,h1{
+                font-size: 40px;
+                font-weight: 500;
+                color:white;
+            }
+        }
+
+    }
+    .menu{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(131, 131, 248);
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+
+        h3{
+            margin: 5px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 90px);
+        background-color: lightsalmon;
+        position: relative;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        
+        > *{
+            width: 100%;
+            height: calc(100vh - 90px);
+        }
+    }
+}

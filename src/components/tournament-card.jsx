@@ -1,15 +1,9 @@
-import { useNavigate } from "react-router";
 import "./tournament-card.css";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Link } from "react-router-dom";
 
 const TournamentCard = ({tournament}) => {
-    
-    const navigate = useNavigate()
-
-    const goToTournament = (id) => {
-        navigate(`/tournaments/${id}`)
-    }
 
     return ( 
         <div className="card">
@@ -26,7 +20,9 @@ const TournamentCard = ({tournament}) => {
                     </div>
                 </div>
                 <div className="bottom">
-                    <button onClick={() => goToTournament(tournament.id)} className="">Voir les détails</button>
+                    <Link to={`/tournaments/${tournament._id}`}>
+                        <button>Voir les détails</button>
+                    </Link>
                 </div>
             </div>
         </div>

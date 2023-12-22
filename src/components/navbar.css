@@ -25,10 +25,10 @@
         .right{
             .hamburger{
                 width: 32px;
-                height: 30px;
+                height: 36px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-around;
                 cursor: pointer;
                 margin-left: 120px;
 
